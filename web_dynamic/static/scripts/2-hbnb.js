@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
   let new_list = [];
   $('input[type="checkbox"]').change(function() {
     if($(this).prop('checked')) {
@@ -15,4 +15,15 @@ $(document).ready(function () {
     amenitiesText = amenitiesText.slice(0, -2);
     $('.amenities h4').text(amenitiesText);
   });
+});
+
+$(function (){
+  const url = 'http://0.0.0.0:5000/api/v1/status/';
+  $.get(url, function (data, status) {
+    if(status !== "success" && data.status !== "OK") {
+      $('div#api_status').addClass('available');
+    } else {
+      $('div#api_status').removeClass('available')
+    }
+  })
 });
