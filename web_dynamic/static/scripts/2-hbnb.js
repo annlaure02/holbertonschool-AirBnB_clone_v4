@@ -13,17 +13,15 @@ $(function () {
       amenitiesText += name + ', ';
     }
     amenitiesText = amenitiesText.slice(0, -2);
-    $('.amenities h4').text(amenitiesText);
+    $('div.amenities h4').text(amenitiesText);
   });
 });
 
-$(function (){
-  const url = 'http://0.0.0.0:5000/api/v1/status/';
-  $.get(url, function (data, status) {
-    if(status === "success" && data.status === "OK") {
+const url = 'http://0.0.0.0:5000/api/v1/status/';
+  $.get(url, function (data, response) {
+    if(response === "success" && data.status === "OK") {
       $('div#api_status').addClass('available');
     } else {
-      $('div#api_status').removeClass('available')
+      $('div#api_status').removeClass('available');
     }
-  })
-});
+  });
