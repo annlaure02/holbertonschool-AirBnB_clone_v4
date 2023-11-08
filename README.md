@@ -154,8 +154,8 @@ EOF  all  create  destroy  help  quit  show  update
 No known bugs at this time. 
 
 ## Authors
-Anne-Laure Guilloux
-Simon Richard
+Anne-Laure Guilloux  
+Simon Richard  
 
 ### Fork - AirBnB clone v3
 Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)  
